@@ -41,13 +41,6 @@ spring:
         mongodb:
             uri: mongodb://localhost:27017
             database: gateway
-        elasticsearch:
-            cluster-name:
-            cluster-nodes:
-            properties:
-                path:
-                    logs: target/elasticsearch/log
-                    data: target/elasticsearch/data
     mail:
         host: localhost
         port: 25

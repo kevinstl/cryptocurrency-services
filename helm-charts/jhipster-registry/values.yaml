@@ -1,0 +1,21 @@
+# Default values for jhipster-registry.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+image:
+  repository: jhipster/jhipster-registry
+  tag: v3.2.4
+  pullPolicy: Always
+service:
+  name: jhipster-registry
+  type: NodePort
+  externalPort: 8761
+  internalPort: 8761
+#resources:
+#  limits:
+#    cpu: 100m
+#    memory: 128Mi
+#  requests:
+#    cpu: 100m
+#    memory: 128Mi
+

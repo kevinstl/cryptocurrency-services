@@ -23,17 +23,17 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
         - name: SPRING_PROFILES_ACTIVE
-          value: "prod,swagger"
-        - name: EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE
-          value: "http://admin:admin@jhipster-registry-service.default.svc.cluster.local:8761/eureka"
-        - name: SPRING_CLOUD_CONFIG_URI
-          value: "http://admin:admin@jhipster-registry-service.default.svc.cluster.local:8761/config"
-        - name: SPRING_DATA_MONGODB_URI
-          value: "mongodb://gateway-db-mongodb.default.svc.cluster.local:27017"
-        - name: SPRING_DATA_MONGODB_DATABASE
-          value: "gateway"
-        - name: JHIPSTER_SLEEP
-          value: "30"
+          value: "dev,native,swagger"
+        - name: SECURITY_USER_PASSWORD
+          value: "admin"
+        - name: JHIPSTER_REGISTRY_PASSWORD
+          value: "admin"
+        - name: SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS
+          value: "file:./central-config/localhost-config/"
+        - name: GIT_URI
+          value: "https://github.com/jhipster/jhipster-registry/"
+        - name: GIT_SEARCH_PATHS
+          value: "central-config"
         ports:
         - name: internalport
           containerPort: {{ .Values.service.internalPort }}
