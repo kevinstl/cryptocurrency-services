@@ -12,10 +12,10 @@ spec:
     targetPort: {{ .Values.service.inPortHttp }}
     protocol: TCP
     name: {{ .Values.service.nameHttp }}
-#  - port: {{ .Values.service.externalPortTransport }}
-#    targetPort: {{ .Values.service.internalPortTransport }}
-#    protocol: TCP
-#    name: {{ .Values.service.nameTransport }}
+  - port: {{ .Values.service.externalPortTransport }}
+    targetPort: {{ .Values.service.internalPortTransport }}
+    protocol: TCP
+    name: {{ .Values.service.nameTransport }}
   selector:
     app: {{ template "fullname" . }}
 #    tier: web

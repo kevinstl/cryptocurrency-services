@@ -11,10 +11,9 @@ service:
   nameHttp: elasticsearch-http
   externalPortHttp: 9200
   internalPortHttp: 9200
-#  nameTransport: elasticsearch-transport
-#  typeTransport: NodePort
-#  externalPortTransport: 9300
-#  internalPortTransport: 9300
+  nameTransport: elasticsearch-transport
+  externalPortTransport: 9300
+  internalPortTransport: 9300
 #resources:
 #  limits:
 #    cpu: 100m

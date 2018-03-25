@@ -23,11 +23,11 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
         - name: SPRING_PROFILES_ACTIVE
-          value: "dev,native,swagger"
+          value: "prod,swagger"
         - name: SECURITY_USER_PASSWORD
-          value: "admin"
+          value: "{{ .Values.security.adminPassword }}"
         - name: JHIPSTER_REGISTRY_PASSWORD
-          value: "admin"
+          value: "{{ .Values.security.adminPassword }}"
         - name: SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS
           value: "file:./central-config/localhost-config/"
         - name: GIT_URI

@@ -17,8 +17,16 @@ helm del --purge elastisearch
 
 #gateway
 ./mvnw verify -Pprod dockerfile:build
-gcloud docker -- push gcr.io/cryptocurrencyservices-197520/cryptocurrency-services-gateway:0.1.0
+gcloud docker -- push gcr.io/cryptocurrencyservices-197520/cryptocurrency-services-api-gateway:0.1.0
 
-helm del --purge cryptocurrency-services-gateway
-helm install -n cryptocurrency-services-gateway helm-charts/gateway
+helm del --purge cryptocurrency-services-api-gateway
+helm install -n cryptocurrency-services-api-gateway helm-charts/gateway
+
+
+#masternodes-online-supplement-api
+./mvnw verify -Pprod dockerfile:build
+gcloud docker -- push gcr.io/cryptocurrencyservices-197520/masternodes-online-supplement-api:0.1.0
+
+helm del --purge masternodes-online-supplement-api
+helm install -n masternodes-online-supplement-api helm-charts
 
