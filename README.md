@@ -18,12 +18,17 @@ helm del --purge gateway-db
 
 ## jhipster registry
 helm install --name jhipster-registry helm-charts/jhipster-registry
+helm install --name jhipster-registry helm-charts/jhipster-registry --set security.adminPassword=********
 helm del --purge jhipster-registry
 
 
 ## elastisearch
 helm install --name elastisearch helm-charts/elastisearch
 helm del --purge elastisearch
+
+
+
+
 
 
 
