@@ -27,7 +27,14 @@ helm install --name elastisearch helm-charts/elastisearch
 helm del --purge elastisearch
 
 
+## nexus
+helm --kube-context gke_cryptocurrencyservices-197520_us-central1-a_masternodes-online-supplement install stable/sonatype-nexus
 
+
+## jenkins seed
+
+curl -H "Content-Type: text/xml" -XPOST http://minikube:30010/createItem?name=jenkins-pipeline-k8s-declaritive-seed --data-binary "@./spring-cloud-pipelines-master/config-jenkins-pipeline-k8s-declaritive-seed.xml"
+curl -H "Content-Type: text/xml" -XPOST http://minikube:30010/createItem?name=jenkins-pipeline-k8s-seed --data-binary "@./spring-cloud-pipelines-master/config-jenkins-pipeline-k8s-seed.xml"
 
 
 
