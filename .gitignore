@@ -35,3 +35,5 @@ target
 # JHipster
 ######################
 .yo-rc.json
+
+*fixed.xml

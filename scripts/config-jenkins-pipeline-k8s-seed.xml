@@ -40,7 +40,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>REPO_WITH_BINARIES_FOR_UPLOAD</name>
-					<defaultValue>http://10.74.1.54:8081/artifactory/libs-release-local</defaultValue>
+					<defaultValue>http://X_KUBERNETES_SERVICE_HOST_X:30011/artifactory/libs-release-local</defaultValue>
 					<description>Address to hosted JARs</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
@@ -60,7 +60,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>TOOLS_REPOSITORY</name>
-					<defaultValue>https://github.com/spring-cloud/spring-cloud-pipelines</defaultValue>
+					<defaultValue>https://github.com/kevinstl/spring-cloud-pipelines</defaultValue>
 					<description>The URL containing pipeline functions repository</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
@@ -130,7 +130,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>DOCKER_REGISTRY_ORGANIZATION</name>
-					<defaultValue>scpipelines</defaultValue>
+					<defaultValue>kevinstl</defaultValue>
 					<description>URL to Kubernetes cluster for test env</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
