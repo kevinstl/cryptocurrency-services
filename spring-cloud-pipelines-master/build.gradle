@@ -140,7 +140,7 @@ List<String> projects = []
 projects << "generateJenkinsReadme"
 //remove::end[JENKINS]
 //remove::start[CONCOURSE]
-projects << "generateConcourseReadme"
+//projects << "generateConcourseReadme"
 //remove::end[CONCOURSE]
 
 task setMavenVersion(dependsOn: [projects]) {

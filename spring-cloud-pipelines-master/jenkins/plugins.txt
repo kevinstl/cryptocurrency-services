@@ -59,7 +59,7 @@ github-branch-source:2.0.4
 github-oauth:0.25
 github-organization-folder:1.6
 git-server:1.7
-gradle:1.26
+gradle:1.28
 greenballs:1.15
 groovy:1.30
 handlebars:1.1.1
