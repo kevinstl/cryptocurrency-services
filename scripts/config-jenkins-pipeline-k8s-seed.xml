@@ -60,7 +60,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>TOOLS_REPOSITORY</name>
-					<defaultValue>https://github.com/kevinstl/cryptocurrency-services/spring-cloud-pipelines-master</defaultValue>
+					<defaultValue>https://github.com/kevinstl/spring-cloud-pipelines</defaultValue>
 					<description>The URL containing pipeline functions repository</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
@@ -160,7 +160,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>PAAS_TEST_CA_PATH</name>
-					<defaultValue>/usr/share/jenkins/cert/ca.crt</defaultValue>
+					<defaultValue>/host-home/.minikube/ca.crt</defaultValue>
 					<description>Certificate Authority location for test env</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
@@ -175,7 +175,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>PAAS_TEST_CLIENT_CERT_PATH</name>
-					<defaultValue>/usr/share/jenkins/cert/apiserver.crt</defaultValue>
+					<defaultValue>/host-home/.minikube/apiserver.crt</defaultValue>
 					<description>Client Certificate location for test env</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
@@ -190,7 +190,7 @@
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
 					<name>PAAS_TEST_CLIENT_KEY_PATH</name>
-					<defaultValue>/usr/share/jenkins/cert/apiserver.key</defaultValue>
+					<defaultValue>/host-home/.minikube/apiserver.key</defaultValue>
 					<description>Client Key location for test env</description>
 				</hudson.model.StringParameterDefinition>
 				<hudson.model.StringParameterDefinition>
