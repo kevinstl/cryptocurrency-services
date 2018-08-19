@@ -6,5 +6,4 @@
 
 #helm --namespace default install --name gateway-db helm-charts/mongodb
 ./deploy-mongo.sh
-helm --namespace default install --name jhipster-registry helm-charts/jhipster-registry --set security.adminPassword=admin
-helm --namespace default install --name elastisearch helm-charts/elastisearch
+helm --kube-context minikube --namespace default install --name jhipster-registry helm-charts/jhipster-registry --set security.adminPassword=admin

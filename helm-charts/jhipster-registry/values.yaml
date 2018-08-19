@@ -8,10 +8,11 @@ image:
   pullPolicy: Always
 service:
   name: jhipster-registry
-  type: NodePort
+#  type: NodePort
+  type: ClusterIP
   externalPort: 8761
   internalPort: 8761
-  nodePort: 30761
+#  nodePort: 30761
 security:
   adminPassword: admin
 #resources:
