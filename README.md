@@ -12,7 +12,8 @@ https://github.com/kevinstl/masternodes-online-supplement-api
 # Deploy Using Helm
 
 ## mongo
-helm install --name gateway-db stable/mongodb
+kubectl create namespace cryptocurrency-services
+helm --namespace cryptocurrency-services install --name gateway-db helm-charts/mongodb
 helm del --purge gateway-db
 
 
@@ -25,6 +26,8 @@ helm del --purge jhipster-registry
 ## elastisearch
 helm install --name elastisearch helm-charts/elastisearch
 helm del --purge elastisearch
+
+./deploy-elastisearch.sh cryptocurrency-services
 
 
 ## nexus

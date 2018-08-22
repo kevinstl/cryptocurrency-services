@@ -6,7 +6,11 @@ mongoDb=$3
 
 echo "mongoUser: ${mongoUser} mongoPass: ${mongoPass} mongoDb: ${mongoDb}"
 
+echo "mongo ${mongoDb} --host minikube-easy --port 30017 -u root -p admin --authenticationDatabase admin"
+
 message=`mongo ${mongoDb} --host minikube-easy --port 30017 -u root -p admin --authenticationDatabase admin --eval "db.runCommand({createUser : \"${mongoUser}\",pwd: \"${mongoPass}\", roles: [{role:\"root\", db:\"${mongoDb}\"}] });"`
+
+#message=`mongo admin --host minikube-easy --port 30017 -u root -p admin --authenticationDatabase admin --eval "db.runCommand({createUser : \"${mongoUser}\",pwd: \"${mongoPass}\", roles: [{role:\"root\", db:\"${mongoDb}\"}] });"`
 
 echo ${message}
 
