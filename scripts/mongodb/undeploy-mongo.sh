@@ -1,5 +1,6 @@
 #!/bin/bash
 
+context=$1
 
-helm del --purge gateway-db
+helm --kube-context $context del --purge gateway-db
 

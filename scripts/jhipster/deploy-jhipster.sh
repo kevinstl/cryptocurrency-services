@@ -1,9 +1,19 @@
 #!/bin/bash
 
-namespace=$1
-adminPassword=$2
+context=$1
+namespace=$2
+adminPassword=$3
+releaseSuffix=$4
+helmCommand=$5
 
-helm --namespace $namespace --name jhipster install ../../helm-charts/jhipster-registry --set security.adminPassword=${adminPassword}
+if [[ -z ${helmCommand} ]]
+then
+    helmCommand=helm
+fi
+
+$helmCommand --kube-context $context --namespace "${namespace}${releaseSuffix}" --name "jhipster-registry${releaseSuffix}" install ../../helm-charts/jhipster-registry --set security.adminPassword=${adminPassword}
+
+
 
 
 

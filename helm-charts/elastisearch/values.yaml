@@ -7,7 +7,8 @@ image:
   tag: 2.4.6
   pullPolicy: Always
 service:
-  type: NodePort
+  type: ClusterIP
+#  type: NodePort
   nameHttp: elasticsearch-http
   externalPortHttp: 9200
   internalPortHttp: 9200
