@@ -55,9 +55,10 @@ mongodbExtraFlags: []
 service:
 #  type: ClusterIP
   type: NodePort
+#  type: LoadBalancer
 #  port: 27017
   targetPort: 27017
-  nodePort: 30017
+#  nodePort: 30017
 
   ## Specify the nodePort value for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport

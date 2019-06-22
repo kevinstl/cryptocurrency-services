@@ -9,8 +9,8 @@ then
     helmCommand=helm
 fi
 
-$helmCommand --kube-context $context del --purge "elastisearch${releaseSuffix}"
+$helmCommand --kube-context $context del --purge "keycloak${releaseSuffix}"
 
-#./undeploy-elastisearch.sh minikube ""
+#./undeploy-keycloak.sh minikube ""
 #./undeploy-elastisearch.sh gke_wildebot-186003_us-central1-c_bot-instances "-staging"
 #./undeploy-elastisearch.sh gke_wildebot-186003_us-central1-c_bot-instances "-production"

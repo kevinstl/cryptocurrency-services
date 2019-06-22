@@ -14,3 +14,4 @@ $helmCommand --kube-context $context --namespace "${namespace}${releaseSuffix}" 
 
 
 
+#./deploy-elastisearch.sh minikube jx "-local"

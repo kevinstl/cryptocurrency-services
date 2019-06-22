@@ -12,4 +12,5 @@ fi
 
 $helmCommand --kube-context $context del --purge "jhipster-registry${releaseSuffix}"
 
-#./undeploy-jhipster.sh minikube
+#./undeploy-jhipster.sh minikube -local
+#./undeploy-jhipster.sh gke_wildebot-186003_us-central1-c_bot-instances -staging

@@ -25,7 +25,19 @@ spec:
         - name: {{ . }}
       {{- end}}
       {{- end }}
+
+
+      initContainers:
+      - name: "fix-permissions"
+        image: "busybox"
+        imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+        command: ["sh", "-c", "chown -R 1001:1001 /bitnami"]
+        volumeMounts:
+        - name: data
+          mountPath: /bitnami/mongodb```
+
       containers:
+
       - name: {{ template "mongodb.fullname" . }}
         image: {{ template "mongodb.image" . }}
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
@@ -79,6 +91,7 @@ spec:
           successThreshold: {{ .Values.readinessProbe.successThreshold }}
           failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
         {{- end }}
+
         volumeMounts:
         - name: data
           mountPath: /bitnami/mongodb
