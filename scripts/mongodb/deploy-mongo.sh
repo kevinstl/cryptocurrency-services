@@ -88,6 +88,9 @@ helm --kube-context $context --namespace $namespace install --name ${releaseName
 #./deploy-mongo.sh minikube jx-local test-user test-pass admin admin service-admin service-admin-pass ""
 #./deploy-mongo.sh minikube wildebot-local test-user test-pass admin admin service-admin service-admin-pass "" "" cryptocurrency-services-mongo
 
-
-
+#local
+#./deploy-mongo.sh minikube jx-local test-user test-pass admin admin service-admin service-admin-pass ""
+#./create-mongo-user.sh test-user test-pass gateway-db-mongodb
+#./create-mongo-user.sh admin admin admin
+#./create-mongo-user.sh test-user test-pass admin
 
