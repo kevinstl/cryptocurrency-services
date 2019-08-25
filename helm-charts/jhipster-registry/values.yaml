@@ -4,7 +4,8 @@
 replicaCount: 1
 image:
   repository: jhipster/jhipster-registry
-  tag: v3.2.4
+#  tag: v3.2.4
+  tag: v5.0.2
   pullPolicy: Always
 service:
   name: jhipster-registry

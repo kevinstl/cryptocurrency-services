@@ -10,7 +10,7 @@ then
 fi
 
 #$helmCommand --kube-context $context --namespace "${namespace}${releaseSuffix}" --name "elastisearch${releaseSuffix}" install ../../helm-charts/elasticsearch
-$helmCommand --kube-context $context --namespace "${namespace}" --name "${namespace}-elasticsearch"  install ../../helm-charts/elasticsearch
+$helmCommand --kube-context $context --namespace "${namespace}" --name "${namespace}-elasticsearch"  install ../../helm-charts/elasticsearch-7_3_0
 
 
 
@@ -19,3 +19,4 @@ $helmCommand --kube-context $context --namespace "${namespace}" --name "${namesp
 
 #./deploy-elasticsearch.sh minikube jx "-local"
 #./deploy-elasticsearch.sh gke_wildebot-186003_us-central1-c_bot-instances jx-staging
+#./deploy-elasticsearch.sh gke_wildebot-186003_us-central1-c_bot-instances jx-production
