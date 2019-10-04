@@ -188,6 +188,6 @@ configmap:
 #  setParameter:
 #     enableLocalhostAuthBypass: true
 #  # security options
-#  security:
-#    authorization: enabled
+  security:
+    authorization: enabled
 #    #keyFile: /opt/bitnami/mongodb/conf/keyfile

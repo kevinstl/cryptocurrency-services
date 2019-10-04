@@ -14,7 +14,9 @@ roles:
   data: "true"
 
 replicas: 2
+#replicas: 1
 minimumMasterNodes: 2
+#minimumMasterNodes: 1
 
 esMajorVersion: ""
 
@@ -158,6 +160,7 @@ securityContext:
 # How long to wait for elasticsearch to stop gracefully
 terminationGracePeriod: 120
 
+#sysctlVmMaxMapCount: 262144
 sysctlVmMaxMapCount: 262144
 
 readinessProbe:

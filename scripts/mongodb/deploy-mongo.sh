@@ -3,27 +3,17 @@
 context=$1
 namespace=$2
 
-export MONGO_PROD_TEST_USER=$3
-export MONGO_PROD_TEST_PASS=$4
+mongoUser=$3
+mongoPass=$4
 
-mongoUser=$5
-mongoPass=$6
-
-serviceAdminUser=$7
-serviceAdminPass=$8
-
-nodePort=${9}
-releaseName=${10}
-mongoDatabase=${11}
+nodePort=${5}
+releaseName=${6}
+mongoDatabase=${7}
 
 echo "context: ${context}"
 echo "namespace: ${namespace}"
-echo "MONGO_PROD_TEST_USER: ${MONGO_PROD_TEST_USER}"
-echo "MONGO_PROD_TEST_PASS: ${MONGO_PROD_TEST_PASS}"
 echo "mongoUser: ${mongoUser}"
 echo "mongoPass: ${mongoPass}"
-echo "serviceAdminUser: ${serviceAdminUser}"
-echo "serviceAdminPass: ${serviceAdminPass}"
 echo "nodePort: ${nodePort}"
 echo "releaseName: ${releaseName}"
 
@@ -70,7 +60,9 @@ kubectl --context ${context} create namespace ${namespace}
 
 #helm --kube-context $context --namespace $namespace install --name ${releaseName} --set mongodbRootPassword=${mongoPass} ../../helm-charts/mongodb
 
-helm --kube-context $context --namespace $namespace install --name ${releaseName} --set mongodbRootPassword=${mongoPass} ${serviceTypeValueArg} ${nodePortValueArg} ../../helm-charts/mongodb
+#helm --kube-context $context --namespace $namespace install --name ${releaseName} --set mongodbRootPassword=${mongoPass} ${serviceTypeValueArg} ${nodePortValueArg} ../../helm-charts/mongodb
+
+helm --kube-context $context --namespace $namespace install --name ${releaseName} --set mongodbRootPassword=${mongoPass} ${serviceTypeValueArg} ${nodePortValueArg} ../../helm-charts/mongodb-4_0_12
 
 
 

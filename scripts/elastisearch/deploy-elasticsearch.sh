@@ -10,7 +10,7 @@ then
 fi
 
 #$helmCommand --kube-context $context --namespace "${namespace}${releaseSuffix}" --name "elastisearch${releaseSuffix}" install ../../helm-charts/elasticsearch
-$helmCommand --kube-context $context --namespace "${namespace}" --name "${namespace}-elasticsearch"  install ../../helm-charts/elasticsearch-7_3_0
+$helmCommand --kube-context $context --namespace "${namespace}" --name "${namespace}-elasticsearch"  install ../../helm-charts/elasticsearch-6_4_3
 
 
 

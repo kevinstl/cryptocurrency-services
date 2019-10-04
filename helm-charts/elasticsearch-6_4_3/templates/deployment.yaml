@@ -17,11 +17,27 @@ spec:
 #      securityContext:
 #        runAsUser: 1001
 #        fsGroup: 1001
+      initContainers:
+          - name: init-sysctl
+            image: busybox:1.27.2
+            command:
+            - sysctl
+            - -w
+            - vm.max_map_count=262144
+            securityContext:
+              privileged: true
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        env:
+#        env:
+#        - name: MAX_MAP_COUNT
+#          value: "262144"
+#        command: ["sysctl -w vm.max_map_count=262144 && /elasticsearch/bin/elasticsearch"]
+#        command: ["/elasticsearch/bin/elasticsearch"]
+#        command: ["ls -al /usr/share/elasticsearch"]
+#        command: ["/bin/sh","-c"]
+#        args: ["ls -al /usr/share/elasticsearch; sysctl -w vm.max_map_count=262144 && /usr/share/elasticsearch/bin/elasticsearch"]
         ports:
         - name: exporthttp
           containerPort: {{ .Values.service.externalPortHttp }}
